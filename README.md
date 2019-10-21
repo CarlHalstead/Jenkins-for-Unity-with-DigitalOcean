@@ -1,4 +1,4 @@
-# Jenkins-for-Unity-with-DigitalOcean
+# Jenkins for Unity with DigitalOcean
 
 ## Prerequisites
 
