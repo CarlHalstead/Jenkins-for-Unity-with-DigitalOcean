@@ -2,6 +2,11 @@
 
 ## Contents
 
+* What is...?
+  - DigitalOcean
+  - Jenkins
+  - Unity
+
 * [Prerequisites](#prerequisites)
    - [Required](#required)
    - [Recommended](#recommended)
@@ -12,6 +17,17 @@
    - [Jenkins Setup](#jenkins-setup)
    
 * [Conclusion](#conclusion)
+
+## What is...?
+
+### DigitalOcean
+DigitalOcean is a cloud platform that offers a huge range of services from the more simple storage and Databases to the more advanced 'Droplet' which is your very own Virtual Machine (VM) in the cloud. For the sake of this tutorial, we will be using a Droplet so that we can install our own software onto it.
+
+### Jenkins
+Jenkins is a task automation tool which can be used to tackle an enourmous tange of tasks. Really, the only limit is your imagination. It allows you to create automatically download source control repositores and manipulate them through either Command Prompt or the Terminal depending on your Operating System. For this tutorial we will be using a Shell script to launch Unity with out GitHub project and automatically build and upload the finished build so that it can be tested with ease.
+
+### Unity
+Unity very simply, is a game engine. It is capable of both 2D and 3D games and chances are you have probably played a game made with the engine. If for whatever reason you have not tried it out yet, I would seriously recommend giving it a go and seeing what you can create!
 
 ## Prerequisites
 
