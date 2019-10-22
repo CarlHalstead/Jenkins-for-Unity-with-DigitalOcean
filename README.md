@@ -19,7 +19,6 @@
 
 1. [Initial Server Setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
 2. [How To Install Jenkins on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-18-04)
-
 3. [My UnityBuild.cs located within your project. It should be placed within an Editor folder which can be anywhere in your project.](Unity/Editor/UnityBuild.cs)
 
 #### Recommended
