@@ -59,7 +59,10 @@ Now that your sever is up and running I will be assuming that you have an open S
 
 1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/). You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> 'Allow executing file as program' or by 'cd'ing to the folder through the terminal and running ```sudo chmod +x UnityHubFileName```
 2. When executable, run Unity Hub (The file you just downloaded) and sign in. This will give you a Unity license to use when building your projects.
-3. Install the version(s) of Unity you will use to build your projects. (Note: The Unity Hub does not show all available versions, there are more [here](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/))
+3. Go to /opt/ and create a folder called 'unity' with the following command ``` sudo mkdir -m 777 "unity" ```
+4. Return to the Unity Hub and go to the Settings cog in the top-right. Change the 'Unity Editors Folder' to /opt/unity and click save.
+![Unity Hub editor location](https://i.imgur.com/w2aoavn.png)
+5. Install the version(s) of Unity you will use to build your projects. (Note: The Unity Hub does not show all available versions, there are more [here](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/)). Just make sure to install them into the same location as those from ther Unity Hub!
 
 ### Jenkins Setup
 
@@ -95,7 +98,7 @@ Now that you have your server setup and Unity installed we are now ready to jump
 # Paths for reference for Unity installs and Unity licenses (.ulf files)
 # Each installatuion of Unity should be contained within a folder where the root name is
 # simply its version e.g. 2019.2.3f1 or 2019.3.1f1
-UNITY_PATH="$JENKINS_HOME/UnityInstalls"
+UNITY_PATH="/opt/unity"
 
 # Within this next block of commands we accomplish a single
 # task but in a modular fashion!
