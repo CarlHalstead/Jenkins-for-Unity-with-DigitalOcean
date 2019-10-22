@@ -1,5 +1,16 @@
 # Jenkins for Unity with DigitalOcean
 
+## Contents
+
+* [Prerequisites](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#prerequisites)
+   - [Required](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#required)
+   - [Recommended](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#recommended)
+   - [Optional](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#optional)
+   
+* [Getting Started](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#getting-started)
+   - [Unity Installation](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#unity-installation)
+   - [Jenkins Setup](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#jenkins-setup)
+
 ## Prerequisites
 
 #### Required
@@ -102,3 +113,11 @@ The only setting to change under 'Set GitHub commit status' is called 'Status re
 ![Jenkins set GitHub commit status](https://i.imgur.com/F400URW.png)
 
 * Lastly, 'Delete workspace when build is done' will just wipe everything when the build has finished. Pretty simple.
+
+## Conclusion
+
+Now, you should be able to click 'Build Now' and watch it build through the console in Jenkins.
+![Jenkins build now](https://i.imgur.com/SDOzz8q.png)
+
+With any luck, you will have an error free first build like I did with this tutorial as well as artifacts that yoiu can download and try out!
+![Jenkins successful build with artifacts](https://i.imgur.com/xlpapaq.png)
