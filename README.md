@@ -49,5 +49,13 @@ Now that you have your server setup and Unity installed we are now ready to jump
 ![GitHub access token creation location](https://i.imgur.com/sy7CmMf.png)
 7. Next we will add this token to your Jenkins credentials. Under 'Credentials' click 'Add' -> 'Jenkins'.
 ![Jenkins - adding credentials](https://i.imgur.com/tVvfmYy.png)
-8. In the username field, input your GitHub email. For your password, you will paste the token you created just a moment ago. If you forgot to copy it, you will need to create a new one. Give it a sensible description.
+8. In the username field, input your GitHub email. For your password, you will paste the token you created just a moment ago. If you forgot to copy it, you will need to create a new one. Give it a sensible description. Click 'Add'
 ![Jenkins credential creation](https://i.imgur.com/VyNPTSU.png)
+9. In the 'Credentials' dropdown select your newly created credentials.
+![jenkins credential selection](https://i.imgur.com/zJ5XPoE.png)
+10. In the 'Build Trigger' section we will set it up so that GitHub pings your server when a new commit is made. You could change it so that it checks for updates at regular intervals however this may lead to a delay to your build after commiting. Tick 'GitHub hook trigger for GITScm polling'.
+![Jenkins build after committing](https://i.imgur.com/z4E5b1S.png)
+11. Go to your GitHub repository. Go to 'Settings' -> 'Webhooks' -> 'Add Webhook'
+![GitHub webhooks](https://i.imgur.com/2mxdchJ.png)
+12. For the 'Payload URL' input either the IP address of your server or your domain with '/github-webhook/' appended to the end. Make sure SSL verification is enabled and select 'Just the push event'. Create the webhook.
+![GitHub webhook setup](https://i.imgur.com/ybeRznP.png)
