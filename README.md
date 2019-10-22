@@ -27,7 +27,7 @@ The following optional prerequisits are for if you would like your Jenkins insta
 
 Now that your sever is up and running I will be assuming that you have an open SSL connection to your server with your own user so you can run commands in the terminal.
 
-1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/). You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> Allow executing file as program or by 'cd'ing to the folder through the terminal and running ```sudo chmod +x UnityHubFileName```
+1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/). You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> 'Allow executing file as program' or by 'cd'ing to the folder through the terminal and running ```sudo chmod +x UnityHubFileName```
 2. When executable, run Unity Hub (The file you just downloaded) and sign in. This will give you a Unity license to use when building your projects.
 3. Install the version(s) of Unity you will use to build your projects. (Note: The Unity Hub does not show all available versions, there are more [here](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/))
 
@@ -59,3 +59,46 @@ Now that you have your server setup and Unity installed we are now ready to jump
 ![GitHub webhooks](https://i.imgur.com/2mxdchJ.png)
 12. For the 'Payload URL' input either the IP address of your server or your domain with '/github-webhook/' appended to the end. Make sure SSL verification is enabled and select 'Just the push event'. Create the webhook.
 ![GitHub webhook setup](https://i.imgur.com/ybeRznP.png)
+13. Now for the meat of the process, how to actually build your application. Here, I will show you what I am personally using and how to edit that to fit your own needs. Click 'Add build step' -> 'Execute shell'. My script is as follows, feel free to paste it in:
+
+```
+# Paths for reference for Unity installs and Unity licenses (.ulf files)
+# Each installatuion of Unity should be contained within a folder where the root name is
+# simply its version e.g. 2019.2.3f1 or 2019.3.1f1
+UNITY_PATH="$JENKINS_HOME/UnityInstalls"
+
+# Within this next block of commands we accomplish a single
+# task but in a modular fashion!
+# 1. Find a file called ProjectVersion.txt within a folder called ProjectSettings. (This can be anywhere in the workspace)
+# 2. Read said file
+# 3. Using a regular expression, extract the version number used for the project
+# 4. Trim whitespace around the version
+cd "$WORKSPACE"
+UNITY_VERSION_FILE_PATH="$(find . | grep ProjectSettings/ProjectVersion.txt)"
+UNITY_VERSION_CONTENTS=$(cat "$UNITY_VERSION_FILE_PATH")
+UNITY_VERSION="$(echo $UNITY_VERSION_CONTENTS | grep -oP '(?<=m_EditorVersion: ).*?(?=m_EditorVersionWithRevision:)')"
+UNITY_VERSION="$(echo $UNITY_VERSION | xargs)"
+
+# Make a directory within the workspace where the build will be deposited.
+# Anyone can write to this folder.
+mkdir -m 777 -p "$WORKSPACE/_Final_"
+
+# Launch Unity with the desired project and parameters.
+"$UNITY_PATH/Unity-$UNITY_VERSION/Editor/Unity" -projectPath "$WORKSPACE/" -executeMethod UnityBuild.BuildPlatforms -buildPath "$WORKSPACE/_Final_/" -windows64 -batchmode -nographics -quit
+```
+
+This script should work by just being pasted in. The only thing you need to change is the UNITY_PATH variable. This should be the folder with your version of Unity installed. It will contain folder simply called the version of the editor inside. 2019.2.3f1 for example. By default this is /home/YourUsername/Unity/Hub/Editor so if you have not changed the path within the Unity Hub, change ``` UNITY_PATH="$JENKINS_HOME/UnityInstalls" ``` to ``` UNITY_PATH="/home/YourUsername/Unity/Hub/Editor" ``` where YourUsername is the name of your user. (carl for me).
+
+For more information on the command line arguments I am using to launch Unity, [here is the official Untiy documentation page.](https://docs.unity3d.com/Manual/CommandLineArguments.html)
+14. Finally, bringing this tutorial to an end, there are 3 post-build actions I use (Although you may not want to use one or another for various reasons) and these are:
+
+* 'Archive the artifacts', where the 'File to archive' field contains '_Final_/&ast;&ast;/&ast;' which is where we build our project. 
+![Jenkins archiving artifacts](https://i.imgur.com/nZbyCba.png)
+
+* The second post-build action I use called 'Set GitHub commit status'. What this does is simply let GitHub know whether a build has passed or failed and shows a tick or cross like so with a link to the build.
+![GitHub commit status](https://i.imgur.com/NZeMeSG.png)
+
+The only setting to change under 'Set GitHub commit status' is called 'Status result' which needs to be changed to 'One of default messages and statuses'.
+![Jenkins set GitHub commit status](https://i.imgur.com/F400URW.png)
+
+* Lastly, 'Delete workspace when build is done' will just wipe everything when the build has finished. Pretty simple.
