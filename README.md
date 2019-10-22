@@ -66,6 +66,9 @@ Now that your sever is up and running I will be assuming that you have an open S
 ![Unity Hub editor location](https://i.imgur.com/w2aoavn.png)
 5. Install the version(s) of Unity you will use to build your projects. (Note: The Unity Hub does not show all available versions, there are more [here](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/)). Just make sure to install them into the same location as those from ther Unity Hub!
 
+After successful installation of the Unity editor(s), you should have a folder structure that look like so.
+![Unity installation folder structure](https://i.imgur.com/ajwLyn6.png)
+
 ### Jenkins Setup
 
 Now that you have your server setup and Unity installed we are now ready to jump into Jenkins! (Note: For simplicity we well assume that your repository is hosted on GitHub. I may update this to include other hosts but for now, just GitHub)
