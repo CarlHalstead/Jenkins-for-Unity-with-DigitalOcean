@@ -44,3 +44,10 @@ Now that you have your server setup and Unity installed we are now ready to jump
 ![Jenkins GitHub URL](https://i.imgur.com/2iAlQIX.png)
 5. Next, under 'Source Code Management' select 'Git' and where it says 'Repository URL' enter the same URL you entered previously but remove the last slash and add .git as shown below.
 ![Jenkins GitHub URL Cont.](https://i.imgur.com/dTyjx3a.png)
+6. Go to the [following GitHub link](https://github.com/settings/tokens) and click 'Generate new token' (You will be prompted for your password). Under 'Note' give this token a name such as 'Jenkins', something simple to refer to your server and tick the top box called simply 'repo' and click 'Generate Token'. This will allow the server to build private repositories too! (Note: Make sure to copy your new token!)
+![GitHub access token creation](https://i.imgur.com/QYU37yi.png)
+![GitHub access token creation location](https://i.imgur.com/sy7CmMf.png)
+7. Next we will add this token to your Jenkins credentials. Under 'Credentials' click 'Add' -> 'Jenkins'.
+![Jenkins - adding credentials](https://i.imgur.com/tVvfmYy.png)
+8. In the username field, input your GitHub email. For your password, you will paste the token you created just a moment ago. If you forgot to copy it, you will need to create a new one. Give it a sensible description.
+![Jenkins credential creation](https://i.imgur.com/VyNPTSU.png)
