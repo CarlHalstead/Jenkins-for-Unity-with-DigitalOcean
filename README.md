@@ -125,7 +125,7 @@ mkdir -m 777 -p "$WORKSPACE/_Final_"
 "$UNITY_PATH/$UNITY_VERSION/Editor/Unity" -projectPath "$WORKSPACE/" -executeMethod UnityBuild.BuildPlatforms -buildPath "$WORKSPACE/_Final_/" -windows64 -batchmode -nographics -quit
 ```
 
-This script should work by just being pasted in. The only thing you need to change is the UNITY_PATH variable. This should be the folder with your version of Unity installed. It will contain folder simply called the version of the editor inside. 2019.2.3f1 for example. By default this is /home/YourUsername/Unity/Hub/Editor so if you have not changed the path within the Unity Hub, change ``` UNITY_PATH="$JENKINS_HOME/UnityInstalls" ``` to ``` UNITY_PATH="/home/YourUsername/Unity/Hub/Editor" ``` where YourUsername is the name of your user. (carl for me).
+This script should work by just being pasted in. The only thing you need to change is the UNITY_PATH variable. This should be the folder with your version of Unity installed. It will contain folder simply called the version of the editor inside. 2019.2.3f1 for example. If you have been following along, this should be /opt/unity as shown in the script.
 
 For more information on the command line arguments I am using to launch Unity, [here is the official Untiy documentation page.](https://docs.unity3d.com/Manual/CommandLineArguments.html)
 14. Finally, bringing this tutorial to an end, there are 3 post-build actions I use (Although you may not want to use one or another for various reasons) and these are:
