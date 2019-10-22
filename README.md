@@ -127,6 +127,12 @@ mkdir -m 777 -p "$WORKSPACE/_Final_"
 
 This script should work by just being pasted in. The only thing you need to change is the UNITY_PATH variable. This should be the folder with your version of Unity installed. It will contain folder simply called the version of the editor inside. 2019.2.3f1 for example. If you have been following along, this should be /opt/unity as shown in the script.
 
+Note: By default, this script will build for Windows 64bit as denoted by the -windows64 command line argument. You can see the other available platforms [here](Unity/Editor/UnityBuild.cs#L16) and simply append them to the arguments. For example if you wanted to build for Linux 64bit, Mac OS and WebGL, it would read:
+
+```
+"$UNITY_PATH/$UNITY_VERSION/Editor/Unity" -projectPath "$WORKSPACE/" -executeMethod UnityBuild.BuildPlatforms -buildPath "$WORKSPACE/_Final_/" -linux64 -macos -webgl -batchmode -nographics -quit
+```
+
 For more information on the command line arguments I am using to launch Unity, [here is the official Untiy documentation page.](https://docs.unity3d.com/Manual/CommandLineArguments.html)
 14. Finally, bringing this tutorial to an end, there are 3 post-build actions I use (Although you may not want to use one or another for various reasons) and these are:
 
