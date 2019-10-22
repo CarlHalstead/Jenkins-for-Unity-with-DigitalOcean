@@ -57,6 +57,8 @@ The following optional prerequisits are for if you would like your Jenkins insta
 
 Now that your sever is up and running I will be assuming that you have an open SSL connection to your server with your own user so you can run commands in the terminal.
 
+#### NOTE: As far as I am aware, you will need a VNC client to be able to use the Unity Hub. I am not aware of any command line arguments being implemented!
+
 1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/). You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> 'Allow executing file as program' or by 'cd'ing to the folder through the terminal and running ```sudo chmod +x UnityHubFileName```
 2. When executable, run Unity Hub (The file you just downloaded) and sign in. This will give you a Unity license to use when building your projects.
 3. Go to /opt/ and create a folder called 'unity' with the following command ``` sudo mkdir -m 777 "unity" ```
