@@ -114,7 +114,7 @@ UNITY_VERSION="$(echo $UNITY_VERSION | xargs)"
 mkdir -m 777 -p "$WORKSPACE/_Final_"
 
 # Launch Unity with the desired project and parameters.
-"$UNITY_PATH/Unity-$UNITY_VERSION/Editor/Unity" -projectPath "$WORKSPACE/" -executeMethod UnityBuild.BuildPlatforms -buildPath "$WORKSPACE/_Final_/" -windows64 -batchmode -nographics -quit
+"$UNITY_PATH/$UNITY_VERSION/Editor/Unity" -projectPath "$WORKSPACE/" -executeMethod UnityBuild.BuildPlatforms -buildPath "$WORKSPACE/_Final_/" -windows64 -batchmode -nographics -quit
 ```
 
 This script should work by just being pasted in. The only thing you need to change is the UNITY_PATH variable. This should be the folder with your version of Unity installed. It will contain folder simply called the version of the editor inside. 2019.2.3f1 for example. By default this is /home/YourUsername/Unity/Hub/Editor so if you have not changed the path within the Unity Hub, change ``` UNITY_PATH="$JENKINS_HOME/UnityInstalls" ``` to ``` UNITY_PATH="/home/YourUsername/Unity/Hub/Editor" ``` where YourUsername is the name of your user. (carl for me).
