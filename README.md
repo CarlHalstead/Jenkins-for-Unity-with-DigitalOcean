@@ -2,14 +2,14 @@
 
 ## Contents
 
-* [Prerequisites](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#prerequisites)
-   - [Required](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#required)
-   - [Recommended](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#recommended)
-   - [Optional](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#optional)
+* [Prerequisites](#prerequisites)
+   - [Required](#required)
+   - [Recommended](#recommended)
+   - [Optional](#optional)
    
-* [Getting Started](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#getting-started)
-   - [Unity Installation](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#unity-installation)
-   - [Jenkins Setup](https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean#jenkins-setup)
+* [Getting Started](#getting-started)
+   - [Unity Installation](#unity-installation)
+   - [Jenkins Setup](#jenkins-setup)
    
 * [Conclusion](#conclusion)
 
