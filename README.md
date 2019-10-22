@@ -32,3 +32,15 @@ Now that your sever is up and running I will be assuming that you have an open S
 3. Install the version(s) of Unity you will use to build your projects. (Note: The Unity Hub does not show all available versions, there are more [here](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/))
 
 ### Jenkins Setup
+
+Now that you have your server setup and Unity installed we are now ready to jump into Jenkins! (Note: For simplicity we well assume that your repository is hosted on GitHub. I may update this to include other hosts but for now, just GitHub)
+
+1. Go to Jenkins, whether this be your servers IP address as seen in DigitalOcean or a domain as recommended in the optional prerequisits steps.
+2. Create a new project (For sake of simplicity I recommend having no spaces in the name)
+![Location of the 'New Item' button](https://i.imgur.com/j16pfT7.png)
+3. Give your project a name and choose 'Freestyle Project' for the type, click Next.
+![Jenkins project name and type](https://i.imgur.com/cMJpmWm.png)
+4. Tick the GitHub project box as shown and enter the URL of your project.
+![Jenkins GitHub URL](https://i.imgur.com/2iAlQIX.png)
+5. Next, under 'Source Code Management' select 'Git' and where it says 'Repository URL' enter the same URL you entered previously but remove the last slash and add .git as shown below.
+![Jenkins GitHub URL Cont.](https://i.imgur.com/dTyjx3a.png)
