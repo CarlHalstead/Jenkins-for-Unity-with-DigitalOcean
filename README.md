@@ -55,7 +55,7 @@ The following optional prerequisits are for if you would like your Jenkins insta
 
 ### Unity Installation
 
-Now that your sever is up and running I will be assuming that you have an open SSL connection to your server with your own user so you can run commands in the terminal.
+Now that your sever is up and running I will be assuming that you have an open SSL connection to your server to run any commands as well as VNC connected.
 
 #### NOTE: As far as I am aware, you will need a VNC client to be able to use the Unity Hub. I am not aware of any command line arguments being implemented!
 
