@@ -140,3 +140,5 @@ Now, you should be able to click 'Build Now' and watch it build through the cons
 
 With any luck, you will have an error free first build like I did with this tutorial as well as artifacts that yoiu can download and try out!
 ![Jenkins successful build with artifacts](https://i.imgur.com/xlpapaq.png)
+
+### Now go! Go and make awesome things!
