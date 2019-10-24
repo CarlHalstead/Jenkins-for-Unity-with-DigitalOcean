@@ -29,6 +29,11 @@ Jenkins is a task automation tool which can be used to tackle an enourmous tange
 ### Unity
 Unity very simply, is a game engine. It is capable of both 2D and 3D games and chances are you have probably played a game made with the engine. If for whatever reason you have not tried it out yet, I would seriously recommend giving it a go and seeing what you can create!
 
+## Questions
+
+### I use LFS, will this work with LFS?
+This post does not currently go over Git LFS but I believe there is a plugin within Jenkins that you could install and use to ensure the checkout is done with LFS.
+
 ## Prerequisites
 
 #### Required
