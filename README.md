@@ -8,6 +8,8 @@
   - [Unity](#unity)
   
 * [Questions](#questions)
+   - [I have an error!](#i-have-an-error)
+   - [I have a suggestion!](#i-have-a-suggestion)
    - [I use LFS, will this work with LFS?](#i-use-lfs-will-this-work-with-lfs)
 
 * [Prerequisites](#prerequisites)
@@ -33,6 +35,12 @@ Jenkins is a task automation tool which can be used to tackle an enourmous tange
 Unity very simply, is a game engine. It is capable of both 2D and 3D games and chances are you have probably played a game made with the engine. If for whatever reason you have not tried it out yet, I would seriously recommend giving it a go and seeing what you can create!
 
 ## Questions
+
+### I have an error!
+If you encounter any problems while following this guide, create an 'Issue' on this repository and I will try and respond as soon as posssible. With any luck it will be something simple that we can sort in a few minutes.
+
+### I have a suggestion!
+Suggestion are always welcome! Please create an 'Issue' clearly stating what you think could be improved.
 
 ### I use LFS, will this work with LFS?
 This post does not currently go over Git LFS but I believe there is a plugin within Jenkins that you could install and use to ensure the checkout is done with LFS.
