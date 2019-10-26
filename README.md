@@ -75,7 +75,7 @@ Now that your sever is up and running I will be assuming that you have an open S
 
 #### NOTE: As far as I am aware, you will need a VNC client to be able to use the Unity Hub. I am not aware of any command line arguments being implemented!
 
-1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/). You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> 'Allow executing file as program' or by 'cd'ing to the folder through the terminal and running ```sudo chmod +x UnityHubFileName```
+1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/), either through the link provided or by running ``` wget https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage ``` from the terminal. (You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> 'Allow executing file as program' or by executing the following command ```sudo chmod +x FileNameHere.ExtensionHere```)
 2. When executable, run Unity Hub (The file you just downloaded) and sign in. This will give you a Unity license to use when building your projects.
 3. Go to /opt/ and create a folder called 'unity' with the following command ``` sudo mkdir -m 777 "unity" ```
 4. Return to the Unity Hub and go to the Settings cog in the top-right. Change the 'Unity Editors Folder' to /opt/unity and click save.
