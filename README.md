@@ -48,7 +48,7 @@ This post does not currently go over Git LFS but I believe there is a plugin wit
 ## Prerequisites
 
 #### Required
-* DigitalOcean account ($50 free credit with my [referral](https://m.do.co/c/7d4a120f8b9b))
+* [DigitalOcean account ($50 free credit with my referral](https://m.do.co/c/7d4a120f8b9b))
 * DigitalOcean Droplet (This is a Virtual Machine in the cloud which you can use as you wish. [I have found that you need at least 2GB to compile most Unity projects](https://forum.unity.com/threads/jenkins-ubuntu-executemethod-class-unitybuild-could-not-be-found.764132/). If you created a Droplet with 1GB you can simply shut down the server, [resize it (CPU and RAM Only)](https://www.digitalocean.com/docs/droplets/how-to/resize/) and restart the server.)
 
 1. [Initial Server Setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
@@ -76,7 +76,7 @@ Now that your sever is up and running I will be assuming that you have an open S
 #### NOTE: As far as I am aware, you will need a VNC client to be able to use the Unity Hub. I am not aware of any command line arguments being implemented!
 
 1. [Download the latest version of the Unity Hub](https://forum.unity.com/threads/unity-hub-v-1-0-0-is-now-available.555547/), either through the link provided or by running ``` wget https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage ``` from the terminal. (You may need to give it executable permissions. Either by right-clicking it through your VNC client and going to Properties -> Permissions -> 'Allow executing file as program' or by executing the following command ```sudo chmod +x FileNameHere.ExtensionHere```)
-2. When executable, run Unity Hub (The file you just downloaded) and sign in. This will give you a Unity license to use when building your projects.
+2. When executable, run Unity Hub (Either by double-clicking the .AppImage or by running ``` ./UnityHub.AppImage ```) and sign in. This will give you a Unity license to use when building your projects.
 3. Go to /opt/ and create a folder called 'unity' with the following command ``` sudo mkdir -m 777 "unity" ```
 4. Return to the Unity Hub and go to the Settings cog in the top-right. Change the 'Unity Editors Folder' to /opt/unity and click save.
 ![Unity Hub editor location](https://i.imgur.com/w2aoavn.png)
