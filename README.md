@@ -48,7 +48,7 @@ This post does not currently go over Git LFS but I believe there is a plugin wit
 ## Prerequisites
 
 #### Required
-* [DigitalOcean account ($50 free credit with my referral](https://m.do.co/c/7d4a120f8b9b))
+* [DigitalOcean account](https://m.do.co/c/7d4a120f8b9b) ($50 free credit with my referral)
 * DigitalOcean Droplet (This is a Virtual Machine in the cloud which you can use as you wish. [I have found that you need at least 2GB to compile most Unity projects](https://forum.unity.com/threads/jenkins-ubuntu-executemethod-class-unitybuild-could-not-be-found.764132/). If you created a Droplet with 1GB you can simply shut down the server, [resize it (CPU and RAM Only)](https://www.digitalocean.com/docs/droplets/how-to/resize/) and restart the server.)
 
 1. [Initial Server Setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
@@ -64,8 +64,9 @@ The following optional prerequisits are for if you would like your Jenkins insta
 * Registered domain (You can get one for free from Freenom)
 
 1. [How To Install Nginx on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04)
-2. [How To Secure Nginx with Let's Encrypt on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04)
-3. [How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-18-04)
+2. [How To Configure Jenkins with SSL Using an Nginx Reverse Proxy on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-configure-jenkins-with-ssl-using-an-nginx-reverse-proxy-on-ubuntu-18-04)
+3. [How To Secure Nginx with Let's Encrypt on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04)
+
 
 ## Getting Started
 
