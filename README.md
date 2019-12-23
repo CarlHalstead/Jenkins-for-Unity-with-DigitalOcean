@@ -48,7 +48,7 @@ This post does not currently go over Git LFS but I believe there is a plugin wit
 ## Prerequisites
 
 #### Required
-* [DigitalOcean account](https://m.do.co/c/7d4a120f8b9b) ($50 free credit with my referral)
+* [DigitalOcean account](https://m.do.co/c/7d4a120f8b9b) ($100 free credit with my referral)
 * DigitalOcean Droplet (This is a Virtual Machine in the cloud which you can use as you wish. [I have found that you need at least 2GB to compile most Unity projects](https://forum.unity.com/threads/jenkins-ubuntu-executemethod-class-unitybuild-could-not-be-found.764132/). If you created a Droplet with 1GB you can simply shut down the server, [resize it (CPU and RAM Only)](https://www.digitalocean.com/docs/droplets/how-to/resize/) and restart the server.)
 
 1. [Initial Server Setup with Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04)
