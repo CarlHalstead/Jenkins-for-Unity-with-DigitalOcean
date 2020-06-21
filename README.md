@@ -169,7 +169,7 @@ The only setting to change under 'Set GitHub commit status' is called 'Status re
 Now, you should be able to click 'Build Now' and watch it build through the console in Jenkins.
 ![Jenkins build now](https://i.imgur.com/SDOzz8q.png)
 
-With any luck, you will have an error free first build like I did with this tutorial as well as artifacts that yoiu can download and try out!
+With any luck, you will have an error free first build like I did with this tutorial as well as artifacts that you can download and try out!
 ![Jenkins successful build with artifacts](https://i.imgur.com/xlpapaq.png)
 
 ### Now go! Go and make awesome things!
