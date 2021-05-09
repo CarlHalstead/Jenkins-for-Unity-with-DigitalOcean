@@ -150,7 +150,8 @@ Note: By default, this script will build for Windows 64bit as denoted by the -wi
 "$UNITY_PATH/$UNITY_VERSION/Editor/Unity" -projectPath "$WORKSPACE/" -executeMethod UnityBuild.BuildPlatforms -buildPath "$WORKSPACE/_Final_/" -linux64 -macos -webgl -batchmode -nographics -quit
 ```
 
-For more information on the command line arguments I am using to launch Unity, [here is the official Untiy documentation page.](https://docs.unity3d.com/Manual/CommandLineArguments.html)
+For more information on the command line arguments I am using to launch Unity, [here is the official Unity documentation page.](https://docs.unity3d.com/Manual/CommandLineArguments.html)
+
 14. Finally, bringing this tutorial to an end, there are 3 post-build actions I use (Although you may not want to use one or another for various reasons) and these are:
 
 * 'Archive the artifacts', where the 'File to archive' field contains '_Final_/&ast;&ast;/&ast;' which is where we build our project. 
